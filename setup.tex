@@ -1,0 +1,105 @@
+%!TEX root = references.tex
+% Geometry package for fine-tuning page dimensions
+\usepackage[a4paper,margin=2cm]{geometry}
+
+% Setspace for line spacing
+\usepackage{setspace}
+\setstretch{1.125}
+
+% Subfile package
+\usepackage{subfiles}
+% Colours
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{my_red}{cmyk}{0.24,0.96,0.92,0.17}
+\definecolor{my_blue}{cmyk}{0.97,0.94,0,0.06}
+\definecolor{my_green}{cmyk}{0.92,0,1,0.22}
+\definecolor{my_grey}{cmyk}{0.59,0.46,0.45,0.4}
+
+
+% Customize chapter title style
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\color{my_red}\huge\bfseries}{\thechapter\hspace{3pt}\textcolor{my_blue}{.}\hspace{9pt}}{0pt}{\huge\bfseries}
+\titleformat{\section}[hang]{\color{my_blue}\Large\bfseries}{\thesection\hspace{1.5pt}\textcolor{my_red}{|}\hspace{6pt}}{0pt}{\Large\bfseries}
+\titleformat{\subsection}[hang]{\color{my_red}\large\bfseries}{\thesubsection\hspace{0.75pt}\textcolor{my_blue}{|}\hspace{3pt}}{0pt}{\large\bfseries}
+
+% Custom headers
+\usepackage{fancyhdr}
+
+% Latin Modern font
+\usepackage{lmodern}
+
+% Strike through
+\usepackage[normalem]{ulem}
+
+% En français dans le texte !	
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+% Use pdf, png, jpg, or eps with pdflatex (eps in DVI mode)
+\usepackage{graphicx}
+
+% Math packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{braket}
+
+\usepackage[linesnumbered,algochapter,figure]{algorithm2e}
+\usepackage{csquotes}
+
+% Captions for subfigures
+\usepackage[format=hang,justification=justified,labelfont=bf,font=small]{caption}
+\usepackage[justification=centering,labelfont=normalfont]{subcaption}
+
+% Better tables
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{array}
+\usepackage{booktabs}
+
+\usepackage{enumitem}
+\setlist[itemize]{labelindent=\parindent,align=left,leftmargin=*}
+\setlist[enumerate]{labelindent=\parindent,align=left,leftmargin=*}
+
+
+% Links!
+\usepackage{hyperref}
+
+\usepackage{etoolbox}
+\makeatletter
+\def\@footnotecolor{red}
+\define@key{Hyp}{footnotecolor}{%
+ \HyColor@HyperrefColor{#1}\@footnotecolor%
+}
+\patchcmd{\@footnotemark}{\hyper@linkstart{link}}{\hyper@linkstart{footnote}}{}{}
+\makeatother
+
+\hypersetup{
+	colorlinks = true,
+	linkcolor = my_blue,
+	anchorcolor = my_blue,
+	citecolor = my_red,
+	filecolor = my_green,
+	menucolor = my_red,
+	urlcolor = my_green,
+	footnotecolor = my_green
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tabto}
+\usepackage{scrextend}
+\usepackage{stackengine,graphicx}
+\usepackage{hyperref}
+\usepackage[capitalize]{cleveref}       % cross references 
+\usepackage{textgreek}                  % upright greek letters
+\usepackage{outlines}
+\setlength{\parindent}{0em}             % remove indent
+
+\usepackage{biblatex}
+\addbibresource{JJCAB2021.bib}
